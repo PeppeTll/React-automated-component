@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, writeFile, readFileSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, writeFile } from 'fs';
 import { index, component, barrel } from './component_templates.js';
 
 // grab component name from terminal argument
@@ -23,14 +23,3 @@ writeFile(`${dir}/${name}.jsx`, component(name), writeFileErrorHandler);
 writeFile(`${dir}/${name}.css`, index(name), writeFileErrorHandler);
 // index.jsx
 writeFile(`${dir}/index.js`, barrel(name), writeFileErrorHandler);
-
-// Add "gc" command to package.json script
-const packageJsonPath = './package.json';
-const packageJson = JSON.parse(readFileSync(packageJsonPath));
-
-packageJson.scripts = {
-  ...packageJson.scripts,
-  gc: 'node node_modules/react-auto-component/generate_component/index.js'
-};
-
-writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));

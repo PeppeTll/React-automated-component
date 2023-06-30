@@ -1,7 +1,11 @@
 {
 	"name": "react-auto-component",
+<<<<<<< HEAD
 	"type": "module",
 	"version": "1.0.5",
+=======
+	"version": "1.0.0",
+>>>>>>> parent of d9c1162 (fix project)
 	"description": "",
 	"main": "index.js",
 	"scripts": {
