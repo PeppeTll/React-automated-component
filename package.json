@@ -1,28 +1,28 @@
 {
-  "name": "react-automated-component",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PeppeTll/React-automated-component.git"
-  },
-  "keywords": [
-    "react",
-    "component",
-    "automated",
-    "npm",
-    "generate",
-    "easy",
-    "fast"
-  ],
-  "author": "Giuseppe Talluto",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PeppeTll/React-automated-component/issues"
-  },
-  "homepage": "https://github.com/PeppeTll/React-automated-component#readme"
+	"name": "react-generated-component",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PeppeTll/React-automated-component.git"
+	},
+	"keywords": [
+		"react",
+		"component",
+		"automated",
+		"npm",
+		"generate",
+		"easy",
+		"fast"
+	],
+	"author": "Giuseppe Talluto",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/PeppeTll/React-automated-component/issues"
+	},
+	"homepage": "https://github.com/PeppeTll/React-automated-component#readme"
 }
