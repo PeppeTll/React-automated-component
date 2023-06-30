@@ -35,5 +35,5 @@ writeFile(`${dir}/${name}.css`, index(name), writeFileErrorHandler);
 console.log(`Component file "${name}.css" created.`);
 
 // index.jsx
-writeFile(`${dir}/index.js`, barrel(name), writeFileErrorHandler);
-console.log(`Component file "index.js" created.`);
+writeFile(`${dir}/index.jsx`, barrel(name), writeFileErrorHandler);
+console.log(`Component file "index.jsx" created.`);

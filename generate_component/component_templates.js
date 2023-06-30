@@ -21,7 +21,7 @@ export default ${name};
 
 // index.js
 export function barrel(name) {
-  return `import ${name} from './${name}.js';
+  return `import ${name} from './${name}.jsx';
 
 export default ${name};
 `;
