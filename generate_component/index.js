@@ -23,3 +23,31 @@ writeFile(`${dir}/${name}.jsx`, component(name), writeFileErrorHandler);
 writeFile(`${dir}/${name}.css`, index(name), writeFileErrorHandler);
 // index.jsx
 writeFile(`${dir}/index.js`, barrel(name), writeFileErrorHandler);
+
+// Add "gc" command to package.json during post-installation
+if (process.env.INIT_CWD) {
+  const postInstallScriptPath = './postinstall.js';
+  const postInstallScriptContent = `node ${postInstallScriptPath}`;
+
+  fs.writeFileSync(postInstallScriptPath, `
+    const fs = require('fs');
+    const packageJsonPath = './package.json';
+    const packageJson = require(packageJsonPath);
+    packageJson.scripts = {
+      ...packageJson.scripts,
+      gc: 'node node_modules/react-auto-component/generate_component/index.js'
+    };
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  `);
+
+  // Update package.json with postinstall script
+  const rootPackageJsonPath = `${process.env.INIT_CWD}/package.json`;
+  const rootPackageJson = require(rootPackageJsonPath);
+
+  if (!rootPackageJson.scripts) {
+    rootPackageJson.scripts = {};
+  }
+
+  rootPackageJson.scripts.postinstall = postInstallScriptContent;
+  fs.writeFileSync(rootPackageJsonPath, JSON.stringify(rootPackageJson, null, 2));
+}
