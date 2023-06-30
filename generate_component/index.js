@@ -1,16 +1,23 @@
 import { existsSync, mkdirSync, writeFile } from 'fs';
 import { index, component, barrel } from './component_templates.js';
 
-// grab component name from terminal argument
 const [name] = process.argv.slice(2);
 if (!name) throw new Error('You must include a component name.');
 
-const dir = `./src/components/${name}/`;
+const componentsDir = './src/components/';
+const dir = `${componentsDir}${name}/`;
 
-// throw an error if the file already exists
-if (existsSync(dir)) throw new Error('A component with that name already exists.');
+// Create "Components" directory if it doesn't exist
+if (!existsSync(componentsDir)) {
+  mkdirSync(componentsDir);
+}
 
-// create the folder
+// Throw an error if the component directory already exists
+if (existsSync(dir)) {
+  throw new Error('A component with that name already exists.');
+}
+
+// Create the component directory
 mkdirSync(dir);
 
 function writeFileErrorHandler(err) {
