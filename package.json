@@ -24,5 +24,9 @@
 	"bugs": {
 		"url": "https://github.com/PeppeTll/React-automated-component/issues"
 	},
-	"homepage": "https://github.com/PeppeTll/React-automated-component#readme"
+	"homepage": "https://github.com/PeppeTll/React-automated-component#readme",
+	"devDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
 }
