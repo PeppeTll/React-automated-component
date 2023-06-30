@@ -35,7 +35,7 @@ if (process.env.INIT_CWD) {
     const packageJson = require(packageJsonPath);
     packageJson.scripts = {
       ...packageJson.scripts,
-      gc: 'node node_modules/react-auto-component/generate_component/index.js'
+      gc: 'node node_modules/react-auto-component/index.js'
     };
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
   `);

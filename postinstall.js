@@ -7,7 +7,7 @@ const packageJson = require(packageJsonPath);
 // Add "gc" command to scripts
 packageJson.scripts = {
   ...packageJson.scripts,
-  gc: 'node node_modules/react-auto-component/generate_component/index.js'
+  gc: 'node node_modules/react-auto-component/index.js'
 };
 
 // Write the updated package.json file
