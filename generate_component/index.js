@@ -9,6 +9,7 @@ const dir = `${componentsDir}${name}/`;
 
 // Create "Components" directory if it doesn't exist
 if (!existsSync(componentsDir)) {
+  console.log('Creating "Components" directory...');
   mkdirSync(componentsDir);
 }
 
@@ -19,6 +20,7 @@ if (existsSync(dir)) {
 
 // Create the component directory
 mkdirSync(dir);
+console.log(`Component directory "${name}" created.`);
 
 function writeFileErrorHandler(err) {
   if (err) throw err;
@@ -26,7 +28,12 @@ function writeFileErrorHandler(err) {
 
 // component.jsx
 writeFile(`${dir}/${name}.jsx`, component(name), writeFileErrorHandler);
+console.log(`Component file "${name}.jsx" created.`);
+
 // component.scss
 writeFile(`${dir}/${name}.css`, index(name), writeFileErrorHandler);
+console.log(`Component file "${name}.css" created.`);
+
 // index.jsx
 writeFile(`${dir}/index.js`, barrel(name), writeFileErrorHandler);
+console.log(`Component file "index.js" created.`);
