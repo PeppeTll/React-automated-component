@@ -1,3 +1,5 @@
+import { readFileSync, writeFileSync } from 'fs';
+
 // Add "gc" command to package.json script
 const packageJsonPath = './package.json';
 const packageJson = JSON.parse(readFileSync(packageJsonPath));

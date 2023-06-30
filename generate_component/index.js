@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, writeFile, readFileSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, writeFile } from 'fs';
 import { index, component, barrel } from './component_templates.js';
 
 // grab component name from terminal argument
