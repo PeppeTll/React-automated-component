@@ -7,7 +7,7 @@ export function index(name) {
 
 // component.js
 export function component(name) {
-  return `import './${name}.scss';
+  return `import './${name}.css';
 
 const ${name} = () => {
   return (
