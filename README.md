@@ -18,7 +18,7 @@ Example:
 		"build": "vite build",
 		"lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"gc": "node .generate_component"
+		"gc": "node node_modules/react-auto-component/generate_component/index.js"
 	},
 ...
 
