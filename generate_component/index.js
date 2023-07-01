@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, writeFile } from 'fs';
 import { index, component, barrel } from './component_templates.js';
 import { index as indexTSX, component as componentTSX, barrel as barrelTSX } from './component_templates_ts.js';
 
-const [name, fileType = 'jsx'] = process.argv.slice(2);
+const [name, fileType = 'jsx', indexType = 'css'] = process.argv.slice(2);
 if (!name) throw new Error('You must include a component name.');
 
 const componentsDir = './src/components/';
@@ -44,11 +44,11 @@ if (fileType === 'tsx') {
 }
 
 // Write component files
-writeFile(`${dir}/${name}.${fileType}`, templates.component(name), writeFileErrorHandler);
+writeFile(`${dir}/${name}.${fileType}`, templates.component(name, fileType), writeFileErrorHandler);
 console.log(`Component file "${name}.${fileType}" created.`);
 
-writeFile(`${dir}/${name}.scss`, templates.index(name), writeFileErrorHandler);
-console.log(`Component file "${name}.scss" created.`);
+writeFile(`${dir}/${name}.${indexType}`, templates.index(name, indexType), writeFileErrorHandler);
+console.log(`Component file "${name}.${indexType}" created.`);
 
 writeFile(`${dir}/index.${fileType}`, templates.barrel(name), writeFileErrorHandler);
 console.log(`Component file "index.${fileType}" created.`);
