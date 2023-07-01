@@ -6,8 +6,8 @@ export function index(name) {
 }
 
 // component.tsx
-export function component(name) {
-  return `import './${name}.scss';
+export function component(name, indexType) {
+  return `import ./${name}.${indexType};
 
 // interface ${name}Props {} Add your props type
 
