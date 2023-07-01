@@ -5,6 +5,18 @@ import { index as indexTSX, component as componentTSX, barrel as barrelTSX } fro
 const [name, fileType = 'jsx', indexType = 'css'] = process.argv.slice(2);
 if (!name) throw new Error('You must include a component name.');
 
+const validFileTypes = ['', 'jsx', 'tsx'];
+if (!validFileTypes.includes(fileType)) {
+  console.error(`Invalid file type "${fileType}". The file type must be empty, "jsx", or "tsx".`);
+  process.exit(1);
+}
+
+const validIndexTypes = ['', 'css', 'scss'];
+if (!validIndexTypes.includes(indexType)) {
+  console.error(`Invalid index type "${indexType}". The index type must be empty, "css", or "scss".`);
+  process.exit(1);
+}
+
 const componentsDir = './src/components/';
 const dir = `${componentsDir}${name}/`;
 
@@ -16,6 +28,7 @@ if (!existsSync(componentsDir)) {
 
 // Throw an error if the component directory already exists
 if (existsSync(dir)) {
+  console.log(`A component with the name "${name}" already exists.`);
   throw new Error('A component with that name already exists.');
 }
 

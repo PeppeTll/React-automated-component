@@ -11,7 +11,7 @@ export function component(name, indexType) {
 
 const ${name} = () => {
 return (
-<div className="${name}">Hello 👋, I am a ${name} component.</div>
+  <div className="${name}">Hello 👋, I am a ${name} component.</div>
 );
 };
 
