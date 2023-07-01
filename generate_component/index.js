@@ -44,10 +44,10 @@ if (fileType === 'tsx') {
 }
 
 // Write component files
-writeFile(`${dir}/${name}.${fileType}`, templates.component(name, fileType), writeFileErrorHandler);
+writeFile(`${dir}/${name}.${fileType}`, templates.component(name, indexType), writeFileErrorHandler);
 console.log(`Component file "${name}.${fileType}" created.`);
 
-writeFile(`${dir}/${name}.${indexType}`, templates.index(name, indexType), writeFileErrorHandler);
+writeFile(`${dir}/${name}.${indexType}`, templates.index(name), writeFileErrorHandler);
 console.log(`Component file "${name}.${indexType}" created.`);
 
 writeFile(`${dir}/index.${fileType}`, templates.barrel(name), writeFileErrorHandler);
