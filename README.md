@@ -1,6 +1,6 @@
 # React-auto-component
 
-"The `React-auto-component` package is a powerful script that allows you to effortlessly generate React components in both JSX and TSX (TypeScript) formats, using a simple command-line interface. Say goodbye to manual component creation and embrace the efficiency of automatic component generation!
+The `React-auto-component` package is a powerful script that allows you to effortlessly generate React components in both JSX and TSX (TypeScript) formats, using a simple command-line interface. Say goodbye to manual component creation and embrace the efficiency of automatic component generation!
 
 To use the script, provide the following parameters:
 
@@ -12,7 +12,7 @@ The second parameter can be an empty string, 'jsx', or 'tsx'. If it is not an em
 
 The third parameter can be an empty string, 'css', or 'scss'. If it is not an empty string, it must be followed by 'jsx' or 'tsx'. For example: 'jsx css', 'jsx scss', 'tsx css' or 'tsx scss'.
 
-The script will create the necessary component files and directories for you automatically. Enjoy the convenience of generating React components effortlessly!"
+The script will create the necessary component files and directories for you automatically. Enjoy the convenience of generating React components effortlessly!
 
 ## Installation
 
