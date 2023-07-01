@@ -54,7 +54,7 @@ The React-auto-component will do its magic and create the following directory st
   /components
     /Card
       Card.jsx
-      Card.css
+      Card.scss
       index.jsx
 ```
 
@@ -63,7 +63,7 @@ The contents of the generated files will be as follows:
 Card.jsx
 
 ```jsx
-import "./Card.css";
+import "./Card.scss";
 
 const Card = () => {
 	return <div className="Card">Hello, I am a Card component.</div>;
@@ -74,7 +74,7 @@ export default Card;
 
 Card.css
 
-```css
+```scss
 .Card {
 	/* Add component styles here */
 }
